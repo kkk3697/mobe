@@ -1,0 +1,258 @@
+body {
+  font-family: 'Pretendard', 'Segoe UI', sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #2c2c2c;
+  border-bottom: 1px solid #444;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+}
+.container {
+  padding: 20px;
+}
+.container > h2 {
+  text-align: center;
+  color: #f0f0f0;
+  font-size: 1.8em;
+  margin: 16px 0 24px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 12px;
+}
+.options-bar {
+  justify-content: flex-end;
+  padding-top: 8px;
+  padding-right: 12px;
+  gap: 16px;
+}
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rank-li {
+  padding: 16px 20px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.08em;
+  margin-bottom: 10px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+.rank-extra-box {
+  float: right;
+  font-size: 0.85em;
+  color: #bbb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+  width: 100%;
+}
+.rank-extra {
+  margin-left: 12px;
+  font-size: 0.95em;
+  color: #aaa;
+  background: #383838;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.rank-li:hover {
+  background-color: #333;
+}
+.rank-li.me {
+  transform: scale(1.05);
+  font-size: 1.1em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #4a3b4a 85%, #2e2e2e 100%);
+  box-shadow: 0 0 12px #ff80ab55;
+  border: 2px solid #ff80ab;
+}
+.rank-badge.me {
+  margin-right: 12px;
+  padding: 4px 10px;
+  font-size: 1em;
+  font-size: 0.9em;
+  border-radius: 8px;
+  background: #ff80ab;
+  color: white;
+  border: 2px solid #ff4081;
+  box-shadow: 0 0 8px #ff80ab88;
+}
+.rank-li.me .rank-badge {
+  margin-right: 12px;
+  padding: 4px 10px;
+  font-size: 1em;
+}
+.rank-badge {
+  background-color: #333;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #8ecdfc;
+  font-weight: bold;
+  min-width: 52px;
+  text-align: center;
+}
+.rank-total {
+  font-size: 1.5em;       /* 더 크게 */
+  font-weight: bold;     /* 더 두껍게 */
+  color: #ffffff;        /* 흰색 유지 (더 눈에 띄게 하고 싶으면 #ffcc00 같은 색도 OK) */
+}
+.detail-title .rank-badge.me {
+  font-size: 1.0em;
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: #ff80ab;
+  color: white;
+  border: 2px solid #ff4081;
+  box-shadow: 0 0 10px #ff80ab88;
+  display: inline-block;
+  margin-right: 12px;
+}
+.detail-panel {
+  margin-top: 24px;
+  padding: 20px;
+  background-color: #2e2e2e;
+  border: 1px solid #555;
+  border-radius: 8px;
+  display: none;
+  margin-top: 10px;
+  padding: 16px;
+}
+.detail-panel.visible {
+  display: block;
+}
+#damage-stats-list li {
+  margin-bottom: 16px;
+  padding: 16px 20px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  border: 1px solid #444;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+#damage-stats-list li:hover {
+  background-color: #333;
+}
+.rank-dps {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 4px;
+  color: #ddd;
+  white-space: pre;
+}
+.detail-stats {
+  font-size: 1.1em;
+  gap: 10px;
+}
+.skill-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+.skill-table td {
+  border: 1px solid #555;
+  padding: 14px 10px;
+  font-size: 1em;
+  background-color: #444;
+  text-align: center;
+}
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #ccc;
+  user-select: none;
+}
+.rank-line-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.rank-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rank-left, .rank-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.detail-box {
+  margin-top: 16px;
+  background-color: #2b2b2b;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+.detail-header {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.detail-summary {
+  margin-top: 4px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+.skill-list {
+  margin-top: 8px;
+}
+.skill-bar {
+  position: relative;
+  background: #444;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.skill-bar .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #e74c3c;
+  opacity: 0.8;
+}
+.skill-content {
+  position: relative;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.skill-name {
+  font-weight: bold;
+  color: #fff;
+  flex: 1;
+}
+.skill-values {
+  font-size: 0.85em;
+  color: #ddd;
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+}
